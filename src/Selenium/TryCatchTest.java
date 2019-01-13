@@ -1,32 +1,34 @@
 package Selenium;
 
-public class TryCatchTest extends Tryclass{
+public class TryCatchTest extends Tryclass {
 
-	static void TestandRetry() {
+	static void TestAndRetry() {
 		int count = 0;
 		int maxTries = 4;
 		//int countReset = 0;
 		
 		while (true) {
 			try {
-				runScripts();
+				System.out.println(count);
+				logIn();
 				return;
 			} catch (Exception e) {
 				if (++count == maxTries) throw e;
-				System.err.println(e);
+				e.printStackTrace();
 			}
-
+			
 			/*
 			count = countReset;
 			
 			try {
-				Tryclass.testAnotherThing();
+				runScript2();
 				return;
 			} catch (Exception f) {
 				if (++count == maxTries) throw f;
 				System.err.println(f);
 			}
-			
+			*/
+			/*
 			count = countReset;
 			
 			try {

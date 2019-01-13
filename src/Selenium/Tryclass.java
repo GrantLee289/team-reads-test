@@ -1,14 +1,18 @@
 package Selenium;
 
-public class Tryclass extends TestScripts{
+public class Tryclass extends TestScripts {
 
-	static void runScripts() {
+	static void logIn() {
 		
-		getBaseUrlFirst();
-		logIn();
-		Script1();
+		//contactUsTest();
+		logInTest();
 	}
 	
+	/*
+	static void runScript2() {
+		script1();
+	}
+	*/
 	
 	//maybe get rid of the below (and in the try catch test) and just create a set of scripts to run in TestScripts
 	/*
