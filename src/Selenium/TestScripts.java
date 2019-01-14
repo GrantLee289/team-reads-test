@@ -72,7 +72,15 @@ public class TestScripts extends textFills{
 		
 		driver.findElement(By.xpath("/html[@class='auth0-lock-html']/body/div[@id='auth0-lock-container-1']/div[@class='auth0-lock auth0-lock-opened auth0-lock-with-tabs']/div[@class='auth0-lock-center']/form[@class='auth0-lock-widget']/div[@class='auth0-lock-widget-container']/div[@class='auth0-lock-cred-pane auth0-lock-quiet']/div[3]/span/div/div/div[@class='auth0-lock-view-content']/div/div[@class='auth0-lock-body-content']/div[@class='auth0-lock-content']/div[@class='auth0-lock-form']/div/div[2]/div[@class='auth0-lock-input-block auth0-lock-input-username']/div[@class='auth0-lock-input-wrap auth0-lock-focused auth0-lock-input-wrap-with-icon']/input[@class='auth0-lock-input']")).sendKeys(LOGIN);
 		
-		driver.findElement(By.xpath("/html[@class='auth0-lock-html']/body/div[@id='auth0-lock-container-1']/div[@class='auth0-lock auth0-lock-opened auth0-lock-with-tabs']/div[@class='auth0-lock-center']/form[@class='auth0-lock-widget']/div[@class='auth0-lock-widget-container']/div[@class='auth0-lock-cred-pane auth0-lock-quiet']/div[3]/span/div/div/div[@class='auth0-lock-view-content']/div/div[@class='auth0-lock-body-content']/div[@class='auth0-lock-content']/div[@class='auth0-lock-form']/div/div[2]/div[@class='auth0-lock-input-block auth0-lock-input-show-password']/div[@class='auth0-lock-input-block auth0-lock-input-password']/div[@class='auth0-lock-input-wrap auth0-lock-focused auth0-lock-input-wrap-with-icon']/input[@class='auth0-lock-input']")).sendKeys(PASS);
+		//driver.findElement(By.xpath("/html[@class='auth0-lock-html']/body/div[@id='auth0-lock-container-1']/div[@class='auth0-lock auth0-lock-opened auth0-lock-with-tabs']/div[@class='auth0-lock-center']/form[@class='auth0-lock-widget']/div[@class='auth0-lock-widget-container']/div[@class='auth0-lock-cred-pane auth0-lock-quiet']/div[3]/span/div/div/div[@class='auth0-lock-view-content']/div/div[@class='auth0-lock-body-content']/div[@class='auth0-lock-content']/div[@class='auth0-lock-form']/div/div[2]/div[@class='auth0-lock-input-block auth0-lock-input-show-password']/div[@class='auth0-lock-input-block auth0-lock-input-password']/div[@class='auth0-lock-input-wrap auth0-lock-focused auth0-lock-input-wrap-with-icon']/input[@class='auth0-lock-input']")).sendKeys(PASS);
+		
+		//manually enter password
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		driver.findElement(By.className("auth0-label-submit")).click();
 		handleAlerts();	

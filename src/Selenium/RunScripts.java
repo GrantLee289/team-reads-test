@@ -21,9 +21,10 @@ public class RunScripts extends TryCatchTest implements ActionListener {
 		int green = 95;
 		int blue = 130;
 		
-		JFrame frame = new JFrame(); 
+		JFrame frame = new JFrame("TeamReads Test Suite."); 
 		button = new JButton("Run Test");
 		button.addActionListener(this);
+		button.setPreferredSize(new Dimension(10, 20));
 		
 		graphicsWidget image = new graphicsWidget();
 		
@@ -33,7 +34,6 @@ public class RunScripts extends TryCatchTest implements ActionListener {
         panel.add(label);
         panel.setBackground(new Color(red,green,blue));
 
-		//frame.getContentPane().add(BorderLayout.NORTH, label);
         frame.getContentPane().add(BorderLayout.NORTH, panel);
 		frame.getContentPane().add(BorderLayout.CENTER, image);
 		frame.getContentPane().add(BorderLayout.SOUTH, button);
