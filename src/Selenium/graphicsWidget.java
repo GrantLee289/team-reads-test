@@ -13,6 +13,6 @@ public class graphicsWidget extends JPanel {
 	public void paintComponent(Graphics g) {
 		
 		Image image = new ImageIcon("/Users/Grant/eclipse-workspace/team-reads-test/src/Selenium/LogoWhiteFinal.png").getImage();
-		g.drawImage(image,20,4,this);
+		g.drawImage(image,3,4,this);
 	}
 }

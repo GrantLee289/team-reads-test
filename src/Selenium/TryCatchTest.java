@@ -5,7 +5,7 @@ public class TryCatchTest extends Tryclass {
 	static void TestAndRetry() {
 		int count = 0;
 		int maxTries = 4;
-		//int countReset = 0;
+		int countReset = 0;
 		
 		while (true) {
 			try {
@@ -17,9 +17,9 @@ public class TryCatchTest extends Tryclass {
 				e.printStackTrace();
 			}
 			
-			/*
 			count = countReset;
 			
+			/*
 			try {
 				runScript2();
 				return;
