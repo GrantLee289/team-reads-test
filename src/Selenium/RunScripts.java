@@ -11,6 +11,14 @@ public class RunScripts extends TryCatchTest implements ActionListener {
 	JLabel label;
 	JPanel panel;
 	JPanel panel2;
+	JPanel buttonPanel;
+	JTextField username;
+	JTextField password;
+	
+    public void jTextField1FocusGained(java.awt.event.FocusEvent evt) {                                        
+        username.setText("Username"); 
+        password.setText("Password");
+       }   
 	
 	public void go() {
 		int red = 80;
@@ -22,6 +30,11 @@ public class RunScripts extends TryCatchTest implements ActionListener {
 		button.addActionListener(this);
 		button.setPreferredSize(new Dimension(65, 20));
 		
+        username = new JTextField("Username");
+        password = new JTextField("Password");
+        username.setSize(100,50);
+        password.setSize(100,50);
+		
 		graphicsWidget image = new graphicsWidget();
 		
 		label = new JLabel("<html><font color = 'white'>Team<font color='#228B22'>Reads</font></html>");
@@ -30,20 +43,26 @@ public class RunScripts extends TryCatchTest implements ActionListener {
         panel.add(label);
         panel.setBackground(new Color(red,green,blue));
         
+        buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.setBackground(new Color(red,green,blue));
+        buttonPanel.add(button);
+        
         panel2 = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panel2.add(button);
         panel2.setSize(150, 20);
         panel2.setBackground(new Color(red,green,blue));
+        panel2.add(username);
+        panel2.add(password);
+        panel2.add(BorderLayout.SOUTH, buttonPanel);
         
         frame.getContentPane().add(BorderLayout.NORTH, panel);
 		frame.getContentPane().add(BorderLayout.CENTER, image);
 		frame.getContentPane().add(BorderLayout.SOUTH, panel2);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(260,200);
+		frame.setSize(260,250);
 		frame.setVisible(true);
 		frame.getContentPane().setBackground(new Color(red,green,blue));
 	}
-
+	
 	public void actionPerformed(ActionEvent event) {
 		run();
 	}

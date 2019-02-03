@@ -6,7 +6,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestScripts extends textFills{
-	
+
 	public static String baseUrl = "https://teamreads.netlify.com/login";
 	public static ChromeDriver driver;
 	protected String userName = "";
