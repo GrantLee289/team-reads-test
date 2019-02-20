@@ -2,11 +2,15 @@ package Selenium;
 
 public class Tryclass extends TestScripts {
 
-	static void logIn() {
+	static void run(String method) {
+
+		if (method == "logIn") {
+			logInTest();
+		}
+
 		
-		//contactUsTest();
-		logInTest();
 	}
+
 	
 	/*
 	static void runScript2() {

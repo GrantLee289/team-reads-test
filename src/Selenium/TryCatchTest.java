@@ -7,39 +7,24 @@ public class TryCatchTest extends Tryclass {
 		int maxTries = 4;
 		int countReset = 0;
 		
-		while (true) {
+		String[] methods = new String[10];
+		methods[0] = "login";
+		
 			try {
-				System.out.println(count);
-				logIn();
+				System.out.println("attempt: " + count);
+				for (int x = 0; x < methods.length; x++) {
+					run(methods[x]);
+				}
 				return;
 			} catch (Exception e) {
 				if (++count == maxTries) throw e;
 				e.printStackTrace();
+				if (count < maxTries) {
+					run(methods[x]);
+				}
 			}
 			
-			count = countReset;
-			
-			/*
-			try {
-				runScript2();
-				return;
-			} catch (Exception f) {
-				if (++count == maxTries) throw f;
-				System.err.println(f);
-			}
-			*/
-			/*
-			count = countReset;
-			
-			try {
-				Tryclass.testOneMoreThing();
-				return;
-			} catch (Exception g) {
-				if (++count == maxTries) throw g;
-				System.err.println(g);
-			}
-	*/		
-		}
+			count = countReset;	
 	}
 }
 
