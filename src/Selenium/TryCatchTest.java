@@ -3,28 +3,31 @@ package Selenium;
 public class TryCatchTest extends Tryclass {
 
 	static void TestAndRetry() {
-		int count = 0;
+		int tryCount = 0;
 		int maxTries = 4;
 		int countReset = 0;
+		int y = 0;
 		
 		String[] methods = new String[10];
 		methods[0] = "login";
+		methods[1] = "";
+		methods[2] = "";
 		
 			try {
-				System.out.println("attempt: " + count);
-				for (int x = 0; x < methods.length; x++) {
+				System.out.println("attempt: " + tryCount);
+				for (int x = y; x < methods.length; x++) {
+					y = x;
 					run(methods[x]);
 				}
-				return;
 			} catch (Exception e) {
-				if (++count == maxTries) throw e;
+				if (++tryCount == maxTries) throw e;
 				e.printStackTrace();
-				if (count < maxTries) {
-					run(methods[x]);
+				if (tryCount < maxTries) {
+					run(methods[y]);
 				}
 			}
 			
-			count = countReset;	
+			tryCount = countReset;	
 	}
 }
 
